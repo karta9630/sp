@@ -68,7 +68,7 @@ void Multiply(double *Arra,double *Arrb,int Ra,int Ca,int Rb,int Cb ){
 
 int main(){
     int Ra,Rb,Ca,Cb;
-    printf("input Ra Ca Rb Cb");
+    printf("input Ra Ca Rb Cb\n");
     scanf("%d%d%d%d",&Ra,&Ca,&Rb,&Cb);
     double *Arra=AllArr(Ra,Ca);
     double *Arrb=AllArr(Rb,Cb);
@@ -94,6 +94,4 @@ int main(){
 1 2 
 3 1 
 2 5
-
-
 */
