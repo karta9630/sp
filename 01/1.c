@@ -6,19 +6,19 @@ double *AllArr(int R,int C){
 }
 
 void createArr(double *Arr, int R, int C) {
-    for (int i = 0; i <R; i++) {
+    for (int i=0;i<R;i++) {
         double in[C];
-        for (int j = 0; j < C; j++) {
-            scanf("%lf", &in[j]);
-            Arr[i * C + j] = in[j];
+        for (int j=0;j<C;j++) {
+            scanf("%lf",&in[j]);
+            Arr[i*C+j]=in[j];
         }
     }
 }
 
-void dump(double *Arr, int R, int C) {
-    for (int i = 0; i < R; i++) {
-        for (int j = 0; j < C; j++) {
-            printf("%0.lf ", Arr[i * C + j]);
+void dump(double *Arr,int R,int C) {
+    for (int i=0;i<R;i++) {
+        for (int j=0;j<C;j++) {
+            printf("%0.lf",Arr[i*C+j]);
         }
         printf("\n");
     }
@@ -36,7 +36,7 @@ void Add(double *Arra, double *Arrb,int Ra,int Ca,int Rb,int Cb){
     if (Ra==Rb && Ca==Cb)
     {
         double *temp=AllArr(Ra,Cb);
-        for (int i=0; i < Ra ; i++)
+        for (int i=0;i<Ra;i++)
         {
             for (int j=0;j<Ca;j++)
             {
@@ -50,18 +50,18 @@ void Add(double *Arra, double *Arrb,int Ra,int Ca,int Rb,int Cb){
 }
 void Multiply(double *Arra,double *Arrb,int Ra,int Ca,int Rb,int Cb ){
     if (Ca == Rb) {
-        double *temp = AllArr(Ra, Cb);
-        for (int i = 0; i < Ra; i++) {
-            for (int j = 0; j < Cb; j++) {
-                double sum = 0;
-                for (int k = 0; k < Ca; k++) {
-                    sum += Arra[i * Ca + k] * Arrb[k * Cb + j];
+        double *temp=AllArr(Ra,Cb);
+        for (int i= 0;i<Ra;i++) {
+            for (int j=0;j<Cb;j++){
+                double sum=0;
+                for (int k=0;k<Ca;k++) {
+                    sum += Arra[i*Ca+k] * Arrb[k*Cb +j];
                 }
-                temp[i * Cb + j] = sum;
+                temp[i*Cb+j]=sum;
             }
         }
         printf("Arra * Arrb:\n");
-        dump(temp, Ra, Cb);
+        dump(temp,Ra,Cb);
     }
     else printf("error\n");
 }
