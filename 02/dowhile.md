@@ -1,3 +1,4 @@
+```c
 void DOWHILE() {
   // 宣告兩個整數變數，分別用來存儲迴圈的開始標籤和結束標籤
   int whileBegin = nextLabel();
@@ -26,3 +27,4 @@ void DOWHILE() {
   skip(")");
   skip(";");
 }
+```
