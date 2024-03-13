@@ -108,8 +108,7 @@ void DOWHILE() {
   skip("while");
   skip("(");
   int e = E();
-  emit("if T%d goto L%d\n", e, whileEnd);
-  emit("(L%d)\n", whileEnd);
+  emit("if T%d goto L%d\n", e, whileBegin);
   skip(")");
   skip(";");
 
