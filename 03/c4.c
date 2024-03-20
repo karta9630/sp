@@ -101,8 +101,8 @@ int main() // 主程式
   *e++ = PSH;
   *e++ = IMM; *e++ = 0;
   *e++ = EQ;
-  *e++ = BZ; loc=e; *e++ = 0;
 //4:         return 1;
+  *e++ = BZ; loc=e; *e++ = 0;
   *e++ = IMM; *e++ = 1;
   *e++ = LEV;
 //5:     else if (n < 0)
