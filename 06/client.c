@@ -14,10 +14,17 @@ int main(int argc, char *argv[]) {
     int rc = connect(sfd, (struct sockaddr*) &saddr, sizeof(struct sockaddr));
     assert(rc >= 0);
    
-    while (1) {
-        char msg[SMAX], 
-        fgets(msg, SMAX, stdin);
-    }
+	while (1)
+	{
+		char msg[SMAX];
+		int n = recv(sfd, msg, SMAX - 1, 0);
+		if (n <=0) break;
+		if (n!=1)
+		{
+			printf("Execution result:\n");
+    		printf("%s\n\n", msg);
+		}
+	}
     close(sfd);
     return 0;   
 }
